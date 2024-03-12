@@ -1,0 +1,101 @@
+@import url('https://fonts.google.com/specimen/Montserrat');
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+border: none;
+outline: none;
+scroll-behavior: smooth;
+font-family: 'Montserrat', sans-serif;
+}
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color:#00c9b8;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body {
+  background: var(--second-bg-color);
+  color: var(--text-color);
+    
+  }
+/* .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 5%;
+    
+    background: var(--second-bg-color);
+    display: flex;
+    justify-content: space-between;
+    
+    z-index: 100;
+}
+.header h2{
+  margin-left: 41rem;
+  font-size: 28px;
+  color: var(--text-color);
+
+}  */
+.form-container{
+    background-color: var(--bg-color);
+    margin: 100px;
+    border: 5px solid var(--main-color);
+    margin-left: 400px;
+   margin-right: 300px;
+   width: 500px;
+   padding: 40px;
+   border-radius: 20px;
+}
+.form-container header{
+    margin-left: 120px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+input::placeholder {
+    color: var(--text-color);
+
+  }
+.form-control {
+    background-color: var(--bg-color);
+    margin-left: 70px;
+    margin-bottom: 20px;
+    align-items: center;
+    width: 70%;
+    height: 50px;
+    padding: 20px;
+    /* margin: 20px; */
+    border: 5px solid var(--main-color);
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+    color: var(--text-color);
+}
+.form-image{
+    margin-left: 90px;
+    margin-bottom: 20px;
+}
+
+/* Custom styles for submit button */
+.btn-primary {
+    background-color: var(--main-color);
+    color: var(--second-bg-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 160px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btn-primary:hover {
+    box-shadow: 4px solid var(--main-color);
+}

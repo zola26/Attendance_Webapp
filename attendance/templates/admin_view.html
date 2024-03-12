@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>home</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{% static 'admin_view.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        
+<section class="home" id="home">
+    <div class="header">
+  <h2 class="heading">Admin Dashboard</h2> 
+  <a href="{% url 'logout_admin' %}" class="btn">Logout</a>
+    </div>
+ <div class="home-container">
+  <div class="home-card">
+      
+      <a href="{% url 'index' %}" class="btn"><img src="{% static 'images/attendance.png' %}" alt=""> Attendance</a></br>
+  </div>
+  <div class="home-card">
+      
+      <a href="{% url 'view_report' %}" class="btn"><img src="{% static 'images/report.png'  %}" alt="">View Report</a></br>
+  </div>
+  <div class="home-card">
+    
+    <a href="{% url 'send_all_reports' %}" class="btn"><img src="{% static 'images/sendreport.png'  %}" alt="">Send Report</a></br>
+</div>
+<div class="home-card">
+    
+    <a href="{% url 'add_student' %}" class="btn"><img src="{% static 'images/register1.png'  %}" alt="">Register Student</a></br>
+</div>
+<div class="home-card">
+    
+    <a href="{% url 'students_list' %}" class="btn"><img src="{% static 'images/update.png'  %}" alt="">Update Student</a></br> 
+</div>
+  </div>
+
+</section>
+</body>
+</html>

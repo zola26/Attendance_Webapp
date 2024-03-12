@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face Recognition App</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+</head>
+<body>
+    {% comment %} <header class="header">
+        <h2>AIC Attendance System</h2>
+        
+    </header> {% endcomment %}
+    <div class="container">
+        <div class="camera-container">
+            <img id="live-camera" src="{% url 'video_feed' %}" alt="Live Camera Feed">
+        </div>
+
+        <div class="info-container">
+            <div id="clock-container">
+                <p id="clock"></p>
+              </div>
+          <h2>Face Recognition Details</h2>
+          <div id="detected-person">
+              <img id="person-image" src="{% static 'images/unknown.jpeg' %}" alt="person image">
+              <p id="person-name" alt="Person name"></p>
+              <div class="status">
+                <i id="detection-icon" class=""></i>
+                <p id="detection-status"><i id="detection-icon" class=""></i></p>
+                
+              </div>
+              
+          </div>
+          <audio id="successSound" src="{% static 'audio/success.mp3' %}" preload="auto"></audio>
+          <audio id="alreadyDetectedSound" src="{% static 'audio/already_detected.mp3' %}" preload="auto"></audio>
+      </div>
+      <script>
+        
+        // Pass the URL to the JavaScript code
+        var updateDetectedPersonImageUrl = '{% url "update_detected_person_image" %}';
+    </script>
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+      <script src="{% static 'main.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>home</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{% static 'home.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        
+        {% comment %} <a href="{% url 'login_admin' %}" class="btn" >Login As an Admin</a></br>
+        <a href="{% url 'login_student' %}" class="btn" >Login As a Student</a> {% endcomment %}
+<section class="home" id="home">
+  <h2 class="heading">Login</h2> 
+ <div class="home-container">
+  <div class="home-card">
+      
+      <a href="{% url 'login_admin' %}"  class="btn"><img src="{% static 'images/admin.png' %}" alt="">Admin</a>
+  </div>
+  {% comment %} <div class="home-card">
+      <img src="{% static 'images/student.png'  %}" alt="">
+      <a href="{% url 'login_student' %}" class="btn">Student</a>
+  </div> {% endcomment %}
+  </div>
+
+</section>
+</body>
+</html>

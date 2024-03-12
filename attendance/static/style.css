@@ -1,0 +1,139 @@
+@import url('https://fonts.google.com/specimen/Montserrat');
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+border: none;
+outline: none;
+scroll-behavior: smooth;
+font-family: 'Montserrat', sans-serif;
+}
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color:#00c9b8;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body {
+  background: var(--second-bg-color);
+  color: var(--text-color);
+    
+  }
+  .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 5%;
+    
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    z-index: 100;
+}
+.header h2{
+  margin-left: 40rem;
+  font-size: 30px;
+  color: var(--text-color);
+} 
+
+.header .btn{
+ color: var(--second-bg-color);
+ border: 2px solid var(--main-color);
+ padding: 10px;
+ border-radius: 40px;
+ font-size: 16px;
+ background-color: var(--main-color);
+ font-weight: bold;
+}
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    position: fixed;
+  }
+  .camera-container {
+    width: 640px;
+    height: 480px;
+    overflow: hidden; 
+    margin-right: 40px;
+    margin-left: 20rem;
+    border: 5px solid var(--main-color);
+    border-radius: 40px;
+  }
+
+  /* Adjust the dimensions of the camera display */
+  #live-camera {
+    width: 100%; /* Make the camera display fill the container width */
+    height: auto; /* Maintain the aspect ratio */
+    display: block;
+  }
+  
+  .info-container {
+    background-color: var(--bg-color);
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    width: 300px;
+    height: 480px;
+    border: 5px solid var(--main-color);
+  }
+  .info-container h2{
+    font-size: 24px;
+  }
+  
+  
+  #person-image {
+    width: 220px;
+    height: 220px;
+    margin-top: 10px;
+    border: 5px solid var(--main-color);
+    border-radius: 40px;
+  }
+  #person-name{
+    padding-top: 20px;
+    font-size: 18px;
+  }
+  #detection-status{
+    padding-top: 10px;
+    font-size: 16px;
+  }
+  .status{
+    display: inline-flex;
+    margin-left: -50px;
+  }
+  .bx.bx-message-rounded-x {
+    width: 7rem;
+    height: 7rem;
+    font-size: 4rem;
+    color: red;
+    padding-top: 10px;
+    
+}
+.bx.bx-message-rounded-check{
+    width: 7rem;
+    height: 7rem;
+    font-size: 4rem;
+    color: green;
+    padding-top: 10px;
+}
+
+#clock{
+  margin-bottom: 10px;
+  text-align: left;
+  font-size:20px;
+  width: 150px;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  border: 5px solid var(--main-color);
+} 

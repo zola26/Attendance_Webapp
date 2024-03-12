@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student List</title>
+    <!-- Include Bootstrap CSS -->
+    {% comment %} <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> {% endcomment %}
+    <!-- Custom CSS -->
+    <link href="{% static 'student_list.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4 mb-4">Student List</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Major</th>
+                    <th scope="col">Starting Year</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in students %}
+                <tr>
+                    <th scope="row">{{ student.id }}</th>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.major }}</td>
+                    <td>{{ student.starting_year }}</td>
+                    <td>
+                        <a href="{% url 'update_student' student.id %}" class="btn btn-primary btn-sm">Update</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
